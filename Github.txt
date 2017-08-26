@@ -1,0 +1,11 @@
+Github:
+
+Github is an awesome reasource, it allows you to upload aton of files to a database and keep track of them.
+One of the bonuses of having that ability is the chance to access those files from any computer using github or gitkrackin
+to make things simpler. I think its cool that there is somewhere that we can always stash our work and never loose them. 
+Another cool thing about Github is that it tracks every Commit or save of your file, so if you screw something up you 
+can go back and find the file that works. It is a great tool to use not only in a personal space but and office and 
+professional case as well. Github also allows you to send certain files and have them accessable to your other 
+co workers or members in your team. Git hub is a great resourse for anyone that works on a computer all the time. 
+Github allows you to fork repos that creates an oppurtunity to branch off and work off a project while not effecting 
+the orginal! I am glad that we will be using git in our class!
