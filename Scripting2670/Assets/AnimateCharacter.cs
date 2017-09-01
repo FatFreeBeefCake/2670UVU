@@ -8,8 +8,14 @@ public class AnimateCharacter : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         anims = GetComponent<Animator>();
-        TriggersScript.KeyAction += Animate;
+        PlayButton.Play += Onplay;
 	}
+
+    void Onplay()
+    {
+        TriggersScript.KeyAction += Animate;
+        PlayButton.Play -= Onplay;
+    }
 
     private void Animate(float obj)
     {

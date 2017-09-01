@@ -9,9 +9,14 @@ public class FlipScript : MonoBehaviour {
     Vector3 rotvalue;
 	// Use this for initialization
 	void Start () {
-        TriggersScript.KeyAction += Flip;
+        PlayButton.Play += OnPlay;
 	}
 
+    public void OnPlay()
+    {
+        TriggersScript.KeyAction += Flip;
+        PlayButton.Play -= OnPlay;
+    }
     private void Flip(float obj)
     {
         if (obj > 0)

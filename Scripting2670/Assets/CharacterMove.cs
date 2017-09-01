@@ -14,9 +14,13 @@ public class CharacterMove : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         cc = GetComponent<CharacterController>();
-        TriggersScript.KeyAction += Move;
+        PlayButton.Play += Onplay;
 	}
-	
+	void Onplay()
+    {
+        TriggersScript.KeyAction += Move;
+        PlayButton.Play -= Onplay;
+    }
 	// Update is called once per frame
 	void Move (float _movement) {
         tempMove.x = _movement * speed * Time.deltaTime;
