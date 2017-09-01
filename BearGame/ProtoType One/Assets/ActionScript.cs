@@ -5,7 +5,7 @@ using System;
 public class ActionScript : MonoBehaviour {
 
     public static Action<float> MoveAction;
-    public static Action<float> JumpAction;
+    public static Action JumpAction;
 
 	// Update is called once per frame
 	void Update () {
@@ -13,9 +13,9 @@ public class ActionScript : MonoBehaviour {
         {
             MoveAction(Input.GetAxis("Horizontal"));
         }
-        if (JumpAction != null)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            JumpAction(Input.GetAxis("Vertical"));
+            JumpAction();
         }
 	}
 }
