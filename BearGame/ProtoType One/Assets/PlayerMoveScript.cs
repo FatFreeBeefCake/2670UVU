@@ -19,9 +19,16 @@ public class PlayerMoveScript : MonoBehaviour {
     void Start()
     {
         cc = GetComponent<CharacterController>();
+
+        PlayButton.Play += Onplay;
+    }
+    void Onplay()
+    {
         ActionScript.MoveAction += Move;
         ActionScript.JumpAction = Jump;
+        PlayButton.Play -= Onplay;
     }
+
 
     private void Jump ()
     {
