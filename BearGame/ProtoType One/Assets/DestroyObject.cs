@@ -5,6 +5,7 @@ using UnityEngine;
 public class DestroyObject : MonoBehaviour {
     public GameObject Platform;
 
+
 void OnTriggerEnter()
     {
         Destroy(Platform);
