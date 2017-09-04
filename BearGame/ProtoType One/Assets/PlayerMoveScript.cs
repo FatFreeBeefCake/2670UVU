@@ -8,13 +8,15 @@ public class PlayerMoveScript : MonoBehaviour {
     CharacterController cc;
 
     Vector3 tempMove;
+    Vector3 Fall;
 
     public float speed = 3;
-    public float gravity = 0.5f;
+    public float gravity = 1;
     public float JumpHeight = 100;
     int CurrentJump = 0;
     public int jumpamt = 2;
     public float pushForce = 2.0f;
+    private int Velocity = 0;
     // Use this for initialization
     void Start()
     {
@@ -34,6 +36,7 @@ public class PlayerMoveScript : MonoBehaviour {
     {
         if (cc.isGrounded)
         {
+ 
             CurrentJump = 0;
         }
         if (CurrentJump < jumpamt)
@@ -46,9 +49,14 @@ public class PlayerMoveScript : MonoBehaviour {
     // Update is called once per frame
     void Move(float _movement)
     {
+        if(gravity > 0)
+        {
+            gravity = 1;
+        }
         tempMove.y -= gravity * Time.deltaTime;
         tempMove.x = _movement * speed * Time.deltaTime;
         cc.Move(tempMove);
+
     }
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -67,6 +75,7 @@ public class PlayerMoveScript : MonoBehaviour {
         //apply push force to object
         body.velocity = pushForce * pushDirection;
     }
+
 
    /* if (cc.isGrounded && m_MotorThrottle.y <= 0.001f)
 {
