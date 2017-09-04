@@ -38,7 +38,6 @@ public class PlayerMoveScript : MonoBehaviour {
         }
         if (CurrentJump < jumpamt)
         {
-            print("jump");
             tempMove.y = JumpHeight;
             CurrentJump++;
         }
@@ -68,4 +67,15 @@ public class PlayerMoveScript : MonoBehaviour {
         //apply push force to object
         body.velocity = pushForce * pushDirection;
     }
+
+   /* if (cc.isGrounded && m_MotorThrottle.y <= 0.001f)
+{
+        // Only anti-bump if ground directly under capsule or if there's ground some distance below
+        // to take step offset into account. This eliminates the edge-fall bump.
+        if (Physics.Raycast(transform.position, -Vector3.up, 1f, raycastMask, allowTriggerRaycastHits))
+        {
+            m_CurrentAntiBumpOffset = Mathf.Max(Player.StepOffset.Get(), Vector3.Scale(m_MoveDirection, (Vector3.one - Vector3.up)).magnitude);
+            m_MoveDirection += m_CurrentAntiBumpOffset* Vector3.down;
+}
+}*/
 }
