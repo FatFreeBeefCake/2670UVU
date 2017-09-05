@@ -32,9 +32,21 @@ public class PlayerMoveScript : MonoBehaviour {
     {
         ActionScript.MoveAction += Move;
         ActionScript.JumpAction = Jump;
+        ActionScript.Crouch += Crouch;
+        ActionScript.Stand += Stand;
+
         PlayButton.Play -= Onplay;
     }
 
+    private void Stand()
+    {
+        transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
+    }
+
+    private void Crouch()
+    {
+        transform.localScale = new Vector3(0.6f, 0.3f, 0.6f);
+    }
 
     private void Jump ()
     {
