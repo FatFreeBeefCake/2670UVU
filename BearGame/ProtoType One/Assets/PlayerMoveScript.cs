@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterController))]
 public class PlayerMoveScript : MonoBehaviour {
 
     CharacterController cc;
@@ -10,13 +11,16 @@ public class PlayerMoveScript : MonoBehaviour {
     Vector3 tempMove;
     Vector3 Fall;
 
+    private Action OnLandAction;
+
     public float speed = 3;
     public float gravity = 1;
     public float JumpHeight = 100;
     int CurrentJump = 0;
     public int jumpamt = 2;
     public float pushForce = 2.0f;
-    private int Velocity = 0;
+    public Transform Player;
+
     // Use this for initialization
     void Start()
     {
@@ -49,15 +53,38 @@ public class PlayerMoveScript : MonoBehaviour {
     // Update is called once per frame
     void Move(float _movement)
     {
-        if(gravity > 0)
-        {
-            gravity = 1;
-        }
-        tempMove.y -= gravity * Time.deltaTime;
-        tempMove.x = _movement * speed * Time.deltaTime;
-        cc.Move(tempMove);
 
+      
+        tempMove.x = _movement * speed;
+        cc.Move(tempMove * Time.deltaTime);
+
+        if (!cc.isGrounded)
+        {
+            tempMove.y -= gravity * Time.deltaTime;
+            if (OnLandAction == null)
+            {
+                OnLandAction += restGravity;
+            }
+        }
+        if (cc.isGrounded)
+        {
+            if(OnLandAction != null)
+            {
+                OnLandAction();
+                OnLandAction = null;
+            }
+        }
+        if (tempMove.z < 0 || tempMove.z > 0)
+        {
+            tempMove.z = 0;
+        }
     }
+
+    void restGravity()
+    {
+        tempMove.y = -.1f;
+    }
+
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         Rigidbody body = hit.collider.attachedRigidbody;

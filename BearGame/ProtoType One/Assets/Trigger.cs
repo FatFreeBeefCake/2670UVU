@@ -10,7 +10,7 @@ public class Trigger : MonoBehaviour {
 
     void OnTriggerEnter()
     {
-       GameObject clone = (GameObject)Instantiate (Prefab, Spawnpoint.position, Spawnpoint.rotation);
+        Instantiate (Prefab, Spawnpoint.position, Spawnpoint.rotation);
     }
 
 
