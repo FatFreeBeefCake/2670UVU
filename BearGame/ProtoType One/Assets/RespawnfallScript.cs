@@ -9,6 +9,6 @@ public class RespawnfallScript : MonoBehaviour {
 
     public void OnTriggerEnter()
     {
-        Spawn.Translate(0, 0, 0);
+        Player.transform.position = Spawn.position;
     }
 }
