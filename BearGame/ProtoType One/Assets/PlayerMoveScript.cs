@@ -19,7 +19,8 @@ public class PlayerMoveScript : MonoBehaviour {
     int CurrentJump = 0;
     public int jumpamt = 2;
     public float pushForce = 2.0f;
-    public Transform Player;
+    public GameObject Player;
+    public Transform Spawn;
 
     // Use this for initialization
     void Start()
@@ -115,15 +116,4 @@ public class PlayerMoveScript : MonoBehaviour {
         body.velocity = pushForce * pushDirection;
     }
 
-
-   /* if (cc.isGrounded && m_MotorThrottle.y <= 0.001f)
-{
-        // Only anti-bump if ground directly under capsule or if there's ground some distance below
-        // to take step offset into account. This eliminates the edge-fall bump.
-        if (Physics.Raycast(transform.position, -Vector3.up, 1f, raycastMask, allowTriggerRaycastHits))
-        {
-            m_CurrentAntiBumpOffset = Mathf.Max(Player.StepOffset.Get(), Vector3.Scale(m_MoveDirection, (Vector3.one - Vector3.up)).magnitude);
-            m_MoveDirection += m_CurrentAntiBumpOffset* Vector3.down;
-}
-}*/
 }
