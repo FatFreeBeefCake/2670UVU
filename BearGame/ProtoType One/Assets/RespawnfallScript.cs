@@ -9,6 +9,9 @@ public class RespawnfallScript : MonoBehaviour {
 
     public void OnTriggerEnter()
     {
-        Player.transform.position = Spawn.position;
+            Player.transform.position = Spawn.position;
+        
     }
+
+    
 }

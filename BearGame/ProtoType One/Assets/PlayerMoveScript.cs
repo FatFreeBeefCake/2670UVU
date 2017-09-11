@@ -19,8 +19,7 @@ public class PlayerMoveScript : MonoBehaviour {
     int CurrentJump = 0;
     public int jumpamt = 2;
     public float pushForce = 2.0f;
-    public GameObject Player;
-    public Transform Spawn;
+
 
     // Use this for initialization
     void Start()
