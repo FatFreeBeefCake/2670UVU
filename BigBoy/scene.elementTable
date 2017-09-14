@@ -3,5 +3,7 @@
  <element id="1" elementName="Drawing" elementFolder="Drawing" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
  <element id="2" elementName="older_boy_final_2" elementFolder="older_boy_final_2" pixmapFormat="11" scanType="2" fieldChart="12" vectorType="0" rootFolder="elements"/>
  <element id="3" elementName="Body" elementFolder="Body" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
- <element id="4" elementName="arms" elementFolder="arms" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
+ <element id="4" elementName="redrawforlegs" elementFolder="redrawforlegs" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
+ <element id="5" elementName="shirt" elementFolder="shirt" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
+ <element id="6" elementName="Head" elementFolder="Head" pixmapFormat="2" scanType="2" fieldChart="12" vectorType="2" rootFolder="elements"/>
 </elements>
