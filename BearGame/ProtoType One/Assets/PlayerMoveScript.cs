@@ -86,9 +86,9 @@ public class PlayerMoveScript : MonoBehaviour {
                 OnLandAction = null;
             }
         }
-        if (tempMove.z < 0 || tempMove.z > 0)
+        if (transform.position.z != -3.86f)
         {
-            tempMove.z = 0;
+            transform.position = new Vector3(transform.position.x, transform.position.y, -3.86f);
         }
     }
 
