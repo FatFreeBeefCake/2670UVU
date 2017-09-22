@@ -16,7 +16,7 @@ public class PlayerMoveScript : MonoBehaviour {
     public float speed = 3;
     public float gravity = 1;
     public float JumpHeight = 100;
-    int CurrentJump = 0;
+    public int CurrentJump = 0;
     public int jumpamt = 2;
     public float pushForce = 2.0f;
 
@@ -86,9 +86,9 @@ public class PlayerMoveScript : MonoBehaviour {
                 OnLandAction = null;
             }
         }
-        if (transform.position.z != -3.86f)
+        if (transform.position.z != 0)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, -3.86f);
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         }
     }
 
