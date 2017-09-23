@@ -52,5 +52,9 @@ public class GrabObjectScript : MonoBehaviour {
         }
         
     }
+     void OnTriggerExit()
+    {
+        RB.useGravity = true;
 
+    }
 }
