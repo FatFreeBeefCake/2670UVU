@@ -34,7 +34,6 @@ public class PlayerMoveScript : MonoBehaviour {
         ActionScript.JumpAction = Jump;
         ActionScript.Crouch += Crouch;
         ActionScript.Stand += Stand;
-
         PlayButton.Play -= Onplay;
     }
 

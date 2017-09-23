@@ -5,6 +5,7 @@ using System;
 public class ActionScript : MonoBehaviour {
 
     public static Action<float> MoveAction;
+    public static Action ClimbAction;
     public static Action JumpAction;
     public static Action Crouch;
     public static Action Stand;
@@ -35,6 +36,5 @@ public class ActionScript : MonoBehaviour {
         {
             Stand();
         }
-
 	}
 }
