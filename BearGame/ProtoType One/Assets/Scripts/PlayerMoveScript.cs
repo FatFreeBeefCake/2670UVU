@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMoveScript : MonoBehaviour {
@@ -12,6 +13,7 @@ public class PlayerMoveScript : MonoBehaviour {
     Vector3 Fall;
 
     private Action OnLandAction;
+    private Image healthbar;
 
     public float speed = 3;
     public float gravity = 1;
@@ -19,14 +21,20 @@ public class PlayerMoveScript : MonoBehaviour {
     public int CurrentJump = 0;
     public int jumpamt = 2;
     public float pushForce = 2.0f;
-    public int Health = 100;
+    public int Health, MaxHealth;
+
 
     // Use this for initialization
     void Start()
     {
+        Health = 100;
+        MaxHealth = 100;
+
         cc = GetComponent<CharacterController>();
 
         PlayButton.Play += Onplay;
+
+        healthbar = transform.Find("PlayerCanvas").Find("HealthBarBG").Find("Health").GetComponent<Image>();
     }
     void Onplay()
     {
@@ -112,6 +120,15 @@ public class PlayerMoveScript : MonoBehaviour {
 
         //apply push force to object
         body.velocity = pushForce * pushDirection;
+    }
+    public void Hit(int Damage)
+    {
+        Health -= Damage;
+        healthbar.fillAmount = (float)Health/(float)MaxHealth;
+        if (healthbar.fillAmount < 0.10f)
+        {
+            healthbar.fillAmount = (float)Health / (float)MaxHealth;
+        }
     }
 
 }

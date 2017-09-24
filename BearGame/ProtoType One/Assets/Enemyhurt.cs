@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemyhurt : MonoBehaviour {
 
     public PlayerMoveScript Character;
-
+    public Image healthbar;
     public Transform Spawn;
     public GameObject Player;
-
+    
     void OnTriggerEnter(Collider other)
     {
         Character = other.gameObject.GetComponent<PlayerMoveScript>();
-        Character.Health -= 50;
+        other.gameObject.GetComponent<PlayerMoveScript>().Hit(25);
 
         if (Character.Health < 1)
         {
