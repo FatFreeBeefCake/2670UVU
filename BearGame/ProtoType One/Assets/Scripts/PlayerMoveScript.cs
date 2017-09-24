@@ -19,7 +19,7 @@ public class PlayerMoveScript : MonoBehaviour {
     public int CurrentJump = 0;
     public int jumpamt = 2;
     public float pushForce = 2.0f;
-
+    public int Health = 100;
 
     // Use this for initialization
     void Start()

@@ -8,17 +8,29 @@ public class ClimbScript : MonoBehaviour {
     Vector3 climbtemp;
     CharacterController cc;
     public GameObject Player;
+    public PlayerMoveScript PM;
 
     public float Climbspeed = 100;
 
-void OnTriggerEnter()
+void OnTriggerEnter(Collider other)
     {
-        if (Input.GetKey(KeyCode.W))
+        PM = other.gameObject.GetComponent<PlayerMoveScript>();
+        if (other.tag == "Player" && PM != null)
         {
-            Player.transform.position = new Vector3(0, 10, 0);
-            print("I am Climbing");
+            PM.gravity = 0;
+            PM.JumpHeight = 6;
         }
+
     }
+
+    void OnTriggerExit (Collider other)
+    {
+        if (other.tag == "Player" && PM != null)
+        {
+            PM.gravity = 40;
+            PM.JumpHeight = 13;
+        }
+        }
 
     
 
