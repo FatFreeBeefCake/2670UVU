@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/BearPrototype.unity
     guid: 9f0d3d3573f752949b3235f13be7dedb
+  - enabled: 1
+    path: Assets/SwapScene.unity
+    guid: 6af543107c76721489525f846c9f37f0

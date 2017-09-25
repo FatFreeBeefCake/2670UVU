@@ -125,6 +125,11 @@ public class PlayerMoveScript : MonoBehaviour {
     {
         Health -= Damage;
         healthbar.fillAmount = (float)Health/(float)MaxHealth;
+
+    }
+
+    public void Update ()
+    {
         if (healthbar.fillAmount < 0.10f)
         {
             healthbar.fillAmount = (float)Health / (float)MaxHealth;

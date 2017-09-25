@@ -22,4 +22,9 @@ public class Enemyhurt : MonoBehaviour {
             Character.Health = 100;
         }
     }
+    private void Update()
+    {
+        transform.position = new Vector3 (Mathf.PingPong(Time.time, 4) + 25, transform.position.y, transform.position.z);
+    }
+    
 }
