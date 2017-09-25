@@ -6,7 +6,7 @@ public class GrabObjectScript : MonoBehaviour {
 
     public Transform attachObject;
     public Rigidbody RB;
-
+    public GameObject Player;
     //public GameObject assetArt;
 
 
@@ -30,31 +30,36 @@ public class GrabObjectScript : MonoBehaviour {
 
 
 
-    void OnTriggerStay()
+    void OnTriggerStay(Collider other)
 
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (other.tag == "Player")
         {
-            transform.parent = attachObject;
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                transform.parent = attachObject;
 
-            RB.useGravity = false;
+                RB.useGravity = false;
+                RB.isKinematic = true;
 
-            transform.localPosition = Vector3.zero;
+                transform.localPosition = Vector3.zero;
 
-            transform.localRotation = Quaternion.identity;
-            //assetArt.SetActive(StaticVars.weaponsEnabled);
+                transform.localRotation = Quaternion.identity;
+                //assetArt.SetActive(StaticVars.weaponsEnabled);
+            }
+
+            if (Input.GetKey(KeyCode.W))
+            {
+                transform.parent = null;
+                RB.isKinematic = false;
+                RB.useGravity = true;
+            }
         }
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            transform.parent = null;
-            RB.useGravity = true;
-        }
-        
     }
      void OnTriggerExit()
     {
         RB.useGravity = true;
+        RB.isKinematic = true;
 
     }
 }

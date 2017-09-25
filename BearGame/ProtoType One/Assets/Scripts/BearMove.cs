@@ -6,9 +6,12 @@ public class BearMove : MonoBehaviour {
 
     public GameObject Honey;
 
-    void OnTriggerEnter()
+    void OnTriggerEnter(Collider other)
     {
-        transform.Translate(40, 0, 0);
-        Destroy(Honey);
+        if (other.tag == "Fruit")
+        {
+            transform.Translate(40, 0, 0);
+            Destroy(Honey);
+        }
     }
 }

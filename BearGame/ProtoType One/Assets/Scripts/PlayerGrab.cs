@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerGrab : MonoBehaviour
 {
     public Transform attachObject;
-
+    public GameObject ThisFruit;
     //public GameObject assetArt;
 
 
@@ -29,17 +29,23 @@ public class PlayerGrab : MonoBehaviour
 
 
 
-    void OnTriggerEnter()
+    void OnTriggerStay()
 
     {
 
-        transform.parent = attachObject;
+            if (Input.GetKey(KeyCode.E))
+            {
+                transform.parent = attachObject;
 
-        transform.localPosition = Vector3.zero;
+                transform.localPosition = Vector3.zero;
 
-        transform.localRotation = Quaternion.identity;
-
-        //assetArt.SetActive(StaticVars.weaponsEnabled);
-
+                transform.localRotation = Quaternion.identity;
+            }
+            else if (Input.GetKey(KeyCode.W))
+            {
+                transform.parent = null;
+            }
+            //assetArt.SetActive(StaticVars.weaponsEnabled);
     }
+
 }
