@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/BearPrototype.unity
     guid: 9f0d3d3573f752949b3235f13be7dedb
   - enabled: 1
