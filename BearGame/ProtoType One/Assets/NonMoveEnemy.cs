@@ -13,7 +13,10 @@ public class NonMoveEnemy : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         Character = other.gameObject.GetComponent<PlayerMoveScript>();
-        other.gameObject.GetComponent<PlayerMoveScript>().Hit(25);
+        if (other.tag == "Player")
+        {
+            other.gameObject.GetComponent<PlayerMoveScript>().Hit(15);
+        }
 
         if (Character.Health < 1)
         {

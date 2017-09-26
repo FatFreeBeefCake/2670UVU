@@ -13,7 +13,7 @@ public class Enemyhurt : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         Character = other.gameObject.GetComponent<PlayerMoveScript>();
-        other.gameObject.GetComponent<PlayerMoveScript>().Hit(25);
+        other.gameObject.GetComponent<PlayerMoveScript>().Hit(15);
 
         if (Character.Health < 1)
         {

@@ -16,7 +16,7 @@ public class WaterRespawn : MonoBehaviour {
         if (other.tag == "Player")
         {
             Player.transform.position = Newspawn.position;
-            other.gameObject.GetComponent<PlayerMoveScript>().Hit(25);
+            other.gameObject.GetComponent<PlayerMoveScript>().Hit(30);
 
             if (PMS.Health < 1)
             {
