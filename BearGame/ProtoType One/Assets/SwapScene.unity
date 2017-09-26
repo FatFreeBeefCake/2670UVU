@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4366823, g: 0.48427546, b: 0.5645238, a: 1}
+  m_IndirectSpecularColor: {r: 0.43668243, g: 0.48427624, b: 0.56452495, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -5737,7 +5737,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 914402392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.93, y: 8.1, z: 0}
+  m_LocalPosition: {x: -3.19, y: 8.1, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.43995064}
   m_Children:
   - {fileID: 437996309}
@@ -8519,11 +8519,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4812631440787748, guid: b283990ff54d4c64980dcc99a9c48c7a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 51.43
+      value: 51.47
       objectReference: {fileID: 0}
     - target: {fileID: 4812631440787748, guid: b283990ff54d4c64980dcc99a9c48c7a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 12.92
+      value: 8.19
       objectReference: {fileID: 0}
     - target: {fileID: 4812631440787748, guid: b283990ff54d4c64980dcc99a9c48c7a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -11691,7 +11691,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 135.8, y: -157.5}
+  m_AnchoredPosition: {x: 98.6, y: -118.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2135904377
