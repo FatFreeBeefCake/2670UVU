@@ -11,6 +11,7 @@ public class LeavesScript : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+       
         if (other.tag == "Player")
         {
 
@@ -22,10 +23,10 @@ public class LeavesScript : MonoBehaviour {
             }
         }
     }
-
+    
     IEnumerator delayAndFall()
     {
-        yield return new WaitForSeconds(0.75f);
+        yield return new WaitForSeconds(0.50f);
         Thisplatform.AddComponent<Rigidbody>();
         StartCoroutine(delayAndReset());
     }
