@@ -5,15 +5,15 @@ using UnityEngine;
 public class WaterScript : MonoBehaviour {
 
     public PlayerMoveScript character;
-
+    public GameData GD;
     void OnTriggerEnter(Collider other)
     {
         character = other.gameObject.GetComponent<PlayerMoveScript>();
         if (other.tag == "Player" && character != null)
         {
-            character.gravity = 100;
+           GD.gravity = 100;
             character.JumpHeight = 0;
-            character.speed = 2.5f;
+            GD.speed = 2.5f;
         }
     
 	}
@@ -23,9 +23,9 @@ public class WaterScript : MonoBehaviour {
         character = other.gameObject.GetComponent<PlayerMoveScript>();
         if (other.tag == "Player" && character != null)
         {
-            character.gravity = 40;
+            GD.gravity = 40;
             character.JumpHeight = 13;
-            character.speed = 5;
+            GD.speed = 5;
         }
 
     }

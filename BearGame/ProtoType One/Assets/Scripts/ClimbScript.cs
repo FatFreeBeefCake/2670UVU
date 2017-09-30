@@ -9,6 +9,7 @@ public class ClimbScript : MonoBehaviour {
     CharacterController cc;
     public GameObject Player;
     public PlayerMoveScript PM;
+    public GameData GD;
 
     public float Climbspeed = 100;
 
@@ -17,7 +18,7 @@ void OnTriggerEnter(Collider other)
         PM = other.gameObject.GetComponent<PlayerMoveScript>();
         if (other.tag == "Player" && PM != null)
         {
-            PM.gravity = 0;
+            GD.gravity = 0;
             PM.JumpHeight = 6;
         }
 
@@ -27,7 +28,7 @@ void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player" && PM != null)
         {
-            PM.gravity = 40;
+            GD.gravity = 40;
             PM.JumpHeight = 13;
         }
         }

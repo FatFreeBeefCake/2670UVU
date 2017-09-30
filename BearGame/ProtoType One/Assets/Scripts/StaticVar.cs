@@ -4,12 +4,27 @@ using UnityEngine;
 
 public class StaticVar {
 
-    public enum PlatformType
+    public static float speed;
+
+    public static float dragSpeed;
+
+    public static float boostSpeed;
+
+    public static float gravity;
+
+    public static float boostGravity;
+
+    public static float dragGravity;
+
+
+    public enum GameSpeed
     {
-        UPAndDown,
+        NORMAL,
 
-        LefttoRight,
+        DRAG,
 
+        BOOST,
+
+        SUPERBOOST
     }
-
 }
