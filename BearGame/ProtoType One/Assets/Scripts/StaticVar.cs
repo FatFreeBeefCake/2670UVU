@@ -16,6 +16,8 @@ public class StaticVar {
 
     public static float dragGravity;
 
+    public static float noGravity;
+
 
     public enum GameSpeed
     {
@@ -25,6 +27,9 @@ public class StaticVar {
 
         BOOST,
 
-        SUPERBOOST
+        SUPERBOOST,
+
+        ROPE,
+
     }
 }

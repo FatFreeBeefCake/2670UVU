@@ -5,7 +5,7 @@ using System;
 
 public class ChangeSpeed : MonoBehaviour {
 
-    public static Action<float> SendSpeed;
+    public static Action<float, float> SendSpeed;
 
     public StaticVar.GameSpeed speedType;
     
@@ -14,22 +14,26 @@ public class ChangeSpeed : MonoBehaviour {
         switch (speedType)
         {
             case StaticVar.GameSpeed.DRAG:
-                SendSpeed(StaticVar.dragSpeed);
+                SendSpeed(StaticVar.dragSpeed, StaticVar.gravity);
                 break;
             case StaticVar.GameSpeed.BOOST:
-                SendSpeed(StaticVar.boostSpeed);
+                SendSpeed(StaticVar.boostSpeed, StaticVar.gravity);
                 break;
             case StaticVar.GameSpeed.SUPERBOOST:
-                SendSpeed(StaticVar.boostSpeed * 2);
+                SendSpeed(StaticVar.boostSpeed * 2, StaticVar.gravity);
                 break;
             case StaticVar.GameSpeed.NORMAL:
-                SendSpeed(StaticVar.speed);
+                SendSpeed(StaticVar.speed, StaticVar.gravity);
                 break;
+            case StaticVar.GameSpeed.ROPE:
+                SendSpeed(StaticVar.speed, StaticVar.noGravity);
+                break;
+
         }
     } 
 
     void OntriggerExit()
     {
-        SendSpeed(StaticVar.speed);
+        SendSpeed(StaticVar.speed, StaticVar.gravity);
     }
 }

@@ -15,8 +15,8 @@ public class PlayerMoveScript : MonoBehaviour {
     private Action OnLandAction;
     private Image healthbar;
 
-    float speed;
-    float gravity;
+    public float speed;
+    public float gravity;
     public float JumpHeight = 100;
     public int CurrentJump = 0;
     public int jumpamt = 2;
@@ -35,15 +35,14 @@ public class PlayerMoveScript : MonoBehaviour {
         PlayButton.Play += Onplay;
 
         healthbar = transform.Find("PlayerCanvas").Find("HealthBarBG").Find("Health").GetComponent<Image>();
-        speed = StaticVar.speed;
-        gravity = StaticVar.gravity;
         ChangeSpeed.SendSpeed = SendSpeedHandler;
         
     }
 
-    private void SendSpeedHandler(float _speed)
+    private void SendSpeedHandler(float _speed, float _gravity)
     {
         speed = _speed;
+        gravity = _gravity;
     }
 
     void Onplay()
@@ -53,16 +52,18 @@ public class PlayerMoveScript : MonoBehaviour {
         ActionScript.Crouch += Crouch;
         ActionScript.Stand += Stand;
         PlayButton.Play -= Onplay;
+        speed = StaticVar.speed;
+        gravity = StaticVar.gravity;
     }
 
     private void Stand()
     {
-        transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
+        transform.localScale = new Vector3(1, 1, 1);
     }
 
     private void Crouch()
     {
-        transform.localScale = new Vector3(0.6f, 0.3f, 0.6f);
+        transform.localScale = new Vector3(1, 0.5f, 1f);
     }
 
     private void Jump ()
