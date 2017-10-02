@@ -32,7 +32,7 @@ public class ChangeSpeed : MonoBehaviour {
         }
     } 
 
-    void OntriggerExit()
+    void OnTriggerExit()
     {
         SendSpeed(StaticVar.speed, StaticVar.gravity);
     }

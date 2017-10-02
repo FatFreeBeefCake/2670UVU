@@ -11,7 +11,6 @@ public class WaterScript : MonoBehaviour {
         character = other.gameObject.GetComponent<PlayerMoveScript>();
         if (other.tag == "Player" && character != null)
         {
-           GD.gravity = 100;
             character.JumpHeight = 0;
             GD.speed = 2.5f;
         }
