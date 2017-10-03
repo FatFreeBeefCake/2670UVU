@@ -10,6 +10,8 @@ public class StaticVar {
 
     public static float boostSpeed;
 
+    public static float Run;
+
     public static float gravity;
 
     public static float boostGravity;

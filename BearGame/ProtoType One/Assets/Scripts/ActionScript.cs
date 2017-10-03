@@ -9,6 +9,8 @@ public class ActionScript : MonoBehaviour {
     public static Action JumpAction;
     public static Action Crouch;
     public static Action Stand;
+    public static Action Run;
+    public static Action Walk;
 
 	// Update is called once per frame
 	void Update () {
@@ -35,6 +37,15 @@ public class ActionScript : MonoBehaviour {
         else if (Input.GetKeyUp(KeyCode.DownArrow))
         {
             Stand();
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            Run();
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            Walk();
         }
 
 	}
