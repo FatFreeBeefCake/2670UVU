@@ -11,6 +11,7 @@ public class ActionScript : MonoBehaviour {
     public static Action Stand;
     public static Action Run;
     public static Action Walk;
+    public static Action<float> BearAction;
 
 	// Update is called once per frame
 	void Update () {
@@ -46,6 +47,10 @@ public class ActionScript : MonoBehaviour {
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             Walk();
+        }
+        if (BearAction != null)
+        {
+            BearAction(Input.GetAxis("H2"));
         }
 
 	}

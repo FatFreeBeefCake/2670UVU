@@ -12,6 +12,8 @@ public class StaticVar {
 
     public static float Run;
 
+    public static float noSpeed;
+
     public static float gravity;
 
     public static float boostGravity;
@@ -19,6 +21,7 @@ public class StaticVar {
     public static float dragGravity;
 
     public static float noGravity;
+
 
 
     public enum GameSpeed

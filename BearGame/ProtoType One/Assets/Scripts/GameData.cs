@@ -18,6 +18,8 @@ public class GameData : MonoBehaviour {
 
     public float noGravity = 0;
 
+    public float noSpeed = 0;
+
     public float Run = 12;
 
 	// Use this for initialization
@@ -26,6 +28,7 @@ public class GameData : MonoBehaviour {
         StaticVar.dragSpeed = dragSpeed;
         StaticVar.boostSpeed = boostSpeed;
         StaticVar.Run = Run;
+        StaticVar.noSpeed = noSpeed;    
 
         StaticVar.gravity = gravity;
         StaticVar.boostGravity = boostGravity;
