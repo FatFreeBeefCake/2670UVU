@@ -12,6 +12,7 @@ public class BearMove : MonoBehaviour {
         {
             transform.Translate(40, 0, 0);
             Destroy(Honey);
+            print("stop touching me");
         }
     }
 }
