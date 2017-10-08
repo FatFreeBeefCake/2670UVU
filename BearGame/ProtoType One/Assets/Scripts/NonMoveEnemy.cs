@@ -29,6 +29,6 @@ public class NonMoveEnemy : MonoBehaviour {
     }
     public void Update()
     {
-        transform.position = new Vector3(Mathf.PingPong(Time.time, 3) + 121.5f, transform.position.y, transform.position.z);
+        transform.position = new Vector3(Mathf.PingPong(Time.time, 3) + 90f, transform.position.y, transform.position.z);
     }
 }

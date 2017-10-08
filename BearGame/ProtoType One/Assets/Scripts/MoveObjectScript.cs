@@ -21,9 +21,9 @@ public class MoveObjectScript : MonoBehaviour {
 
     IEnumerator MoveBox()
     {
-        while (transform.position.y > -1)
+        while (transform.position.y > -0.5f)
         {
-            Box.y = -3f * Time.deltaTime;
+            Box.x = -1f * Time.deltaTime;
             transform.Translate(Box);
             yield return null;
         }
