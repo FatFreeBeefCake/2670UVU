@@ -16,7 +16,7 @@ public class StaticVar {
 
     public static float gravity;
 
-    public static float boostGravity;
+    public static float boostgravity;
 
     public static float dragGravity;
 

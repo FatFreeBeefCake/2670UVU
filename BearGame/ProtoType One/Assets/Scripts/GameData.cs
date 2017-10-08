@@ -14,7 +14,7 @@ public class GameData : MonoBehaviour {
 
     public float dragGravity = 20;
 
-    public float boostGravity = 30;
+    public float boostgravity = 150;
 
     public float noGravity = 0;
 
@@ -31,7 +31,7 @@ public class GameData : MonoBehaviour {
         StaticVar.noSpeed = noSpeed;    
 
         StaticVar.gravity = gravity;
-        StaticVar.boostGravity = boostGravity;
+        StaticVar.boostgravity = boostgravity;
         StaticVar.dragGravity = dragGravity;
         StaticVar.noGravity = noGravity;
 	}

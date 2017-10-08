@@ -17,7 +17,7 @@ public class ChangeSpeed : MonoBehaviour {
                 SendSpeed(StaticVar.dragSpeed, StaticVar.gravity);
                 break;
             case StaticVar.GameSpeed.BOOST:
-                SendSpeed(StaticVar.boostSpeed, StaticVar.gravity);
+                SendSpeed(StaticVar.dragSpeed, StaticVar.boostgravity);
                 break;
             case StaticVar.GameSpeed.SUPERBOOST:
                 SendSpeed(StaticVar.boostSpeed * 2, StaticVar.gravity);
