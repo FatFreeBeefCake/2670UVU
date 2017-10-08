@@ -15,8 +15,8 @@ public class PlayerMoveScript : MonoBehaviour {
     private Action OnLandAction;
     private Image healthbar;
 
-    public float speed;
-    public float gravity;
+    float speed;
+    float gravity;
     public float JumpHeight = 100;
     public int CurrentJump = 0;
     public int jumpamt = 2;
@@ -70,12 +70,12 @@ public class PlayerMoveScript : MonoBehaviour {
 
     private void Stand()
     {
-        transform.localScale = new Vector3(1, 1, 1);
+        transform.localScale = new Vector3(0.6f,0.6f,0.6f);
     }
 
     private void Crouch()
     {
-        transform.localScale = new Vector3(1, 0.5f, 1f);
+        transform.localScale = new Vector3(0.6f, 0.3f, 0.6f);
     }
 
     private void Jump ()
