@@ -8,6 +8,6 @@ public class DestroyObject : MonoBehaviour {
 
 void OnTriggerEnter()
     {
-        Destroy(Platform);
+        Platform.SetActive(false);
     }
 }

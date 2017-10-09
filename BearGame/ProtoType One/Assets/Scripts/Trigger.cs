@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Trigger : MonoBehaviour {
 
-    public Transform Spawnpoint;
-    public GameObject Prefab;
-    public GameObject Destroys;
+    public GameObject Box;
 
     void OnTriggerEnter()
     {
-        Instantiate (Prefab, Spawnpoint.position, Spawnpoint.rotation);
+        Box.SetActive(true);
+    }
+
+     void OnTriggerExit()
+    {
+        Box.SetActive(false);
     }
 
 
