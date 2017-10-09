@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FallingSplatform : MonoBehaviour {
+public class BoulderFallScript : MonoBehaviour {
+
 
     public GameObject Thisplatform;
     Vector3 Startpoint;
@@ -25,7 +26,7 @@ public class FallingSplatform : MonoBehaviour {
 
     IEnumerator delayAndFall()
     {
-        yield return new WaitForSeconds(0.10f);
+        yield return new WaitForSeconds(0.05f);
         Thisplatform.AddComponent<Rigidbody>();
         StartCoroutine(delayAndReset());
     }

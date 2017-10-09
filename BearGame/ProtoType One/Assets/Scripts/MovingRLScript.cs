@@ -6,7 +6,7 @@ public class MovingRLScript : MonoBehaviour {
 
 	void Update () {
 
-        transform.position = new Vector3(- Mathf.PingPong(Time.time, 2) - 3, transform.position.y, transform.position.z);
+        transform.localPosition = new Vector3(- Mathf.PingPong(Time.time, 2) + 186, transform.localPosition.y, transform.position.z);
 
     }
 }
