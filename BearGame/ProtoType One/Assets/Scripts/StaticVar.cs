@@ -22,6 +22,18 @@ public class StaticVar {
 
     public static float noGravity;
 
+    public static Data data = new Data();
+
+    public static void GetData()
+    {
+        data = data.GetData();
+    }
+
+    public static void SetData()
+    {
+        data.SetData(data);
+    }
+
 
 
     public enum GameSpeed
