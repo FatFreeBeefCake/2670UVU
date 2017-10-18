@@ -4,8 +4,12 @@ using UnityEngine;
 
 [System.Serializable]
 
- public class Data
+public class Data
 {
+    Data()
+    {
+
+    }
     public int totalScore;
 
     public float health;
@@ -16,16 +20,65 @@ using UnityEngine;
 
     public int gold = 100;
 
+    //Speed
+
+    public  float speed;
+
+    public  float dragSpeed;
+
+    public  float boostSpeed;
+
+    public  float Run;
+
+    public  float noSpeed;
+
+    public  float gravity;
+
+    public  float boostgravity;
+
+    public  float dragGravity;
+
+    public  float noGravity;
+
+    public enum GameSpeed
+    {
+        NORMAL,
+
+        DRAG,
+
+        BOOST,
+
+        SUPERBOOST,
+
+        ROPE,
+
+    }
+
     public List<GameObject> puchases;
 
-    public Data GetData()
+    private static Data _Instance;
+
+    public static Data Instance
+    {
+        get
+        {
+                if (_Instance == null)
+                {
+                    _Instance = new Data();
+                    _Instance = Data.GetData();
+                }
+                return _Instance;
+        }
+    }
+
+    public static Data GetData()
     {
        return JsonUtility.FromJson<Data>(PlayerPrefs.GetString("GameData"));
     }
 
-    public void SetData(Data data)
+    public static void SetData(Data data)
     {
-        PlayerPrefs.SetString("GameData", JsonUtility.ToJson(data));
+        PlayerPrefs.SetString("GameData", JsonUtility.ToJson(_Instance));
     }
 }
 

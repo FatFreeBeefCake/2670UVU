@@ -18,12 +18,12 @@ public class RideBearScript : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                ChangeSpeed.SendSpeed(StaticVar.noSpeed, StaticVar.noGravity);
+                ChangeSpeed.SendSpeed(Data.Instance.noSpeed, Data.Instance.noGravity);
                 Player.transform.parent = Attachpoint;
             }
             if (Input.GetKeyDown(KeyCode.W))
             {
-                ChangeSpeed.SendSpeed(StaticVar.speed, StaticVar.gravity);
+                ChangeSpeed.SendSpeed(Data.Instance.speed, Data.Instance.gravity);
                 Player.transform.parent = null;
             }
         }

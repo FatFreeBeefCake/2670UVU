@@ -54,18 +54,18 @@ public class PlayerMoveScript : MonoBehaviour {
         ActionScript.Crouch += Crouch;
         ActionScript.Stand += Stand;
         PlayButton.Play -= Onplay;
-        speed = StaticVar.speed;
-        gravity = StaticVar.gravity;
+        speed = Data.Instance.speed;
+        gravity = Data.Instance.gravity;
     }
 
     private void Walk()
     {
-        speed = StaticVar.speed;
+        speed = Data.Instance.speed;
     }
 
     private void Run()
     {
-        speed = StaticVar.speed * 2;
+        speed = Data.Instance.speed * 2;
     }
 
     private void Stand()

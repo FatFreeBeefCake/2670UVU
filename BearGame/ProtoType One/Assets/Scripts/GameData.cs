@@ -24,16 +24,16 @@ public class GameData : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        StaticVar.speed = speed;
-        StaticVar.dragSpeed = dragSpeed;
-        StaticVar.boostSpeed = boostSpeed;
-        StaticVar.Run = Run;
-        StaticVar.noSpeed = noSpeed;    
+        Data.Instance.speed = speed;
+        Data.Instance.dragSpeed = dragSpeed;
+        Data.Instance.boostSpeed = boostSpeed;
+        Data.Instance.Run = Run;
+        Data.Instance.noSpeed = noSpeed;    
 
-        StaticVar.gravity = gravity;
-        StaticVar.boostgravity = boostgravity;
-        StaticVar.dragGravity = dragGravity;
-        StaticVar.noGravity = noGravity;
+        Data.Instance.gravity = gravity;
+        Data.Instance.boostgravity = boostgravity;
+        Data.Instance.dragGravity = dragGravity;
+        Data.Instance.noGravity = noGravity;
 	}
 	
 }
