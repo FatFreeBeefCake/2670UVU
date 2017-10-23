@@ -64,16 +64,23 @@ public class Data
         {
                 if (_Instance == null)
                 {
-                    _Instance = new Data();
-                    _Instance = Data.GetData();
+                    
+                    Data.GetData();
                 }
                 return _Instance;
         }
     }
 
-    public static Data GetData()
+    public static void GetData()
     {
-       return JsonUtility.FromJson<Data>(PlayerPrefs.GetString("GameData"));
+        if (string.IsNullOrEmpty(PlayerPrefs.GetString("GameData")))
+        {
+            _Instance = new Data();
+        }else
+        {
+            _Instance = JsonUtility.FromJson<Data>(PlayerPrefs.GetString("GameData"));
+        }
+ 
     }
 
     public static void SetData(Data data)
