@@ -10,4 +10,8 @@ void OnTriggerEnter()
     {
         Platform.SetActive(false);
     }
+    private void OnTriggerExit()
+    {
+        Platform.SetActive(true);
+    }
 }
