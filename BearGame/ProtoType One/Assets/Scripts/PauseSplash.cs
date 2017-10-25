@@ -16,6 +16,13 @@ public class PauseSplash : MonoBehaviour
     public GameObject Bear3;
     public GameObject Bear4;
     public GameObject Bear5;
+    public GameObject Box;
+    public GameObject Box2;
+    public GameObject Box3;
+    public GameObject Box4;
+    public GameObject Box5;
+    public GameObject Box6;
+
 
 
 
@@ -58,6 +65,12 @@ public class PauseSplash : MonoBehaviour
         Bear3.SetActive(true);
         Bear4.SetActive(true);
         Bear5.SetActive(true);
+        Box.SetActive(true);
+        Box2.SetActive(true);
+        Box3.SetActive(true);
+        Box4.SetActive(true);
+        Box5.SetActive(true);
+        Box6.SetActive(true);
     }
 
 }
