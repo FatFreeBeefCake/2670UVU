@@ -18,9 +18,35 @@ using UnityEngine;
 
     public List<GameObject> puchases;
 
-    public Data GetData()
+
+    private static Data _Instance;
+
+    public static Data Instance
     {
-       return JsonUtility.FromJson<Data>(PlayerPrefs.GetString("GameData"));
+        get
+        {
+                if (_Instance == null)
+                {
+                    
+                    Data.GetData();
+                }
+                return _Instance;
+        }
+    }
+
+    public static void GetData()
+
+    public Data GetData()
+
+    {
+        if (string.IsNullOrEmpty(PlayerPrefs.GetString("GameData")))
+        {
+            _Instance = new Data();
+        }else
+        {
+            _Instance = JsonUtility.FromJson<Data>(PlayerPrefs.GetString("GameData"));
+        }
+ 
     }
 
     public void SetData(Data data)

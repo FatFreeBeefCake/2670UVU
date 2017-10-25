@@ -6,8 +6,9 @@ public class DestroyObject : MonoBehaviour {
     public GameObject Platform;
 
 
-void OnTriggerEnter()
+    void OnTriggerEnter(Collider other)
     {
         Platform.SetActive(false);
     }
+
 }

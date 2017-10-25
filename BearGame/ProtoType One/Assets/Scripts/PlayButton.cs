@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayButton : MonoBehaviour {
 
     public static Action Play;
+    public GameObject Playscreen;
 
     public void PushPlay()
     {
@@ -18,6 +19,8 @@ public class PlayButton : MonoBehaviour {
     void TurnOffButton()
     {
         GetComponent<Button>().interactable = false;
+        Playscreen.SetActive(false);
+
     }
 
     public void Retry()
