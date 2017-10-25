@@ -6,6 +6,7 @@ using UnityEngine;
 [System.Serializable]
 public class SetGameData : MonoBehaviour {
 
+    public Data data;
 
     public static Action<int> UpdateGold;
 
@@ -18,27 +19,28 @@ public class SetGameData : MonoBehaviour {
 
     private void BuyGoldHandler(int _gold)
     {
-        Data.Instance.gold += _gold;
-        UpdateGold(Data.Instance.gold);
+        data.gold += _gold;
+        UpdateGold(data.gold);
     }
 
     private void PurchaseHandler(int _price, GameObject _item)
     {
-        if (Data.Instance.gold >= _price)
+        if (data.gold >= _price)
         {
-            Data.Instance.gold -= _price;
-            UpdateGold(Data.Instance.gold);
+            data.gold -= _price;
+            UpdateGold(data.gold);
 
-            Data.Instance.puchases.Add(_item);
+            data.puchases.Add(_item);
         }
     }
 
     void Start()
     {
-        UpdateGold(Data.Instance.gold);
+        data = data.GetData();
+        UpdateGold(data.gold);
     }
     void OnApplicationQuit()
     {
-        Data.SetData(Data.Instance);
+        data.SetData(data);
     }
 }
