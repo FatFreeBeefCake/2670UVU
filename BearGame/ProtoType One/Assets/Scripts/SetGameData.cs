@@ -36,7 +36,7 @@ public class SetGameData : MonoBehaviour {
 
     void Start()
     {
-        data = data.GetData();
+        data = Data.GetData();
         UpdateGold(data.gold);
     }
     void OnApplicationQuit()

@@ -26,7 +26,7 @@ public class StaticVar {
 
     public static void GetData()
     {
-        data = data.GetData();
+        data = Data.GetData();
     }
 
     public static void SetData()
