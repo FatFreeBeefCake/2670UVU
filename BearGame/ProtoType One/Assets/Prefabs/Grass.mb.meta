@@ -1,24 +1,33 @@
 fileFormatVersion: 2
-guid: 02cc151f5aec0f443bc08cfaa6151c0c
-timeCreated: 1509574244
+guid: df2ee7d0bb8c1a242b05366b9c1348a9
+timeCreated: 1509646586
 licenseType: Pro
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: imagePlane1
-    100002: pCube1
-    100004: pCube2
-    100006: //RootNode
-    400000: imagePlane1
-    400002: pCube1
-    400004: pCube2
-    400006: //RootNode
-    2300000: pCube1
-    2300002: pCube2
-    3300000: pCube1
-    3300002: pCube2
-    4300000: pCube1
-    4300002: pCube2
+    100000: //RootNode
+    100002: pCone1
+    100004: pCone2
+    100006: pCone3
+    100008: pCone4
+    100010: pCone5
+    100012: transform1
+    100014: transform2
+    100016: transform3
+    100018: transform4
+    400000: //RootNode
+    400002: pCone1
+    400004: pCone2
+    400006: pCone3
+    400008: pCone4
+    400010: pCone5
+    400012: transform1
+    400014: transform2
+    400016: transform3
+    400018: transform4
+    2300000: pCone5
+    3300000: pCone5
+    4300000: pCone5
     9500000: //RootNode
   materials:
     importMaterials: 1
