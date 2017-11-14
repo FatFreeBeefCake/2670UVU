@@ -12,6 +12,8 @@ public class PlayerMoveScript : MonoBehaviour {
     Vector3 tempMove;
     Vector3 Fall;
 
+    public GameObject Artobj;
+
     private Action OnLandAction;
     private Image healthbar;
 
@@ -34,7 +36,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
         PlayButton.Play += Onplay;
 
-        healthbar = transform.Find("PlayerCanvas").Find("HealthBarBG").Find("Health").GetComponent<Image>();
+        healthbar = transform.Find("BoyANimationsBoy").Find("PlayerCanvas").Find("HealthBarBG").Find("Health").GetComponent<Image>();
         ChangeSpeed.SendSpeed = SendSpeedHandler;
         
     }
@@ -71,15 +73,22 @@ public class PlayerMoveScript : MonoBehaviour {
     private void Stand()
     {
         transform.localScale = new Vector3(0.6f,0.6f,0.6f);
+        Artobj.transform.localScale = new Vector3(20, 20, 20);
+        AniCont.IsCrouched = false;
+        speed = StaticVar.speed;
     }
 
     private void Crouch()
     {
         transform.localScale = new Vector3(0.6f, 0.3f, 0.6f);
+        Artobj.transform.localScale = new Vector3(20,40,20);
+        AniCont.IsCrouched = true;
+        speed = StaticVar.speed / 2;
     }
 
     private void Jump ()
     {
+
         if (cc.isGrounded)
         {
  
@@ -107,6 +116,7 @@ public class PlayerMoveScript : MonoBehaviour {
             {
                 OnLandAction += restGravity;
             }
+            AniCont.IsGrounded = false;
         }
         if (cc.isGrounded)
         {
@@ -115,6 +125,7 @@ public class PlayerMoveScript : MonoBehaviour {
                 OnLandAction();
                 OnLandAction = null;
             }
+            AniCont.IsGrounded = true;
         }
         if (transform.position.z != 0)
         {
