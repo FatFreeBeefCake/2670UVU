@@ -1,0 +1,272 @@
+fileFormatVersion: 2
+guid: d2e6c7b834e6f52449901d8764e8d745
+timeCreated: 1510770538
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Head
+    100002: Head 1
+    100004: L_Joint_01
+    100006: L_Joint_02
+    100008: L_Joint_03
+    100010: L_Joint_04
+    100012: L_Leg_01
+    100014: L_Leg_02
+    100016: L_Leg_03
+    100018: L_Leg_04
+    100020: L_Mouth
+    100022: pCylinder1
+    100024: pCylinder1 1
+    100026: pCylinder2
+    100028: pCylinder2 1
+    100030: pCylinder3
+    100032: pCylinder3 1
+    100034: pCylinder4
+    100036: pCylinder4 1
+    100038: pCylinder5
+    100040: pCylinder5 1
+    100042: pCylinder6
+    100044: pCylinder6 1
+    100046: pCylinder7
+    100048: pCylinder7 1
+    100050: pCylinder8
+    100052: pCylinder8 1
+    100054: R_Joint_01
+    100056: R_Joint_02
+    100058: R_Joint_03
+    100060: R_Joint_04
+    100062: R_Leg_01
+    100064: R_Leg_02
+    100066: R_Leg_03
+    100068: R_Leg_04
+    100070: R_Mouth
+    100072: //RootNode
+    100074: Thorax
+    400000: Head
+    400002: Head 1
+    400004: L_Joint_01
+    400006: L_Joint_02
+    400008: L_Joint_03
+    400010: L_Joint_04
+    400012: L_Leg_01
+    400014: L_Leg_02
+    400016: L_Leg_03
+    400018: L_Leg_04
+    400020: L_Mouth
+    400022: pCylinder1
+    400024: pCylinder1 1
+    400026: pCylinder2
+    400028: pCylinder2 1
+    400030: pCylinder3
+    400032: pCylinder3 1
+    400034: pCylinder4
+    400036: pCylinder4 1
+    400038: pCylinder5
+    400040: pCylinder5 1
+    400042: pCylinder6
+    400044: pCylinder6 1
+    400046: pCylinder7
+    400048: pCylinder7 1
+    400050: pCylinder8
+    400052: pCylinder8 1
+    400054: R_Joint_01
+    400056: R_Joint_02
+    400058: R_Joint_03
+    400060: R_Joint_04
+    400062: R_Leg_01
+    400064: R_Leg_02
+    400066: R_Leg_03
+    400068: R_Leg_04
+    400070: R_Mouth
+    400072: //RootNode
+    400074: Thorax
+    2300000: Head 1
+    2300002: L_Joint_01
+    2300004: L_Joint_02
+    2300006: L_Joint_03
+    2300008: L_Joint_04
+    2300010: L_Mouth
+    2300012: pCylinder1
+    2300014: pCylinder1 1
+    2300016: pCylinder2
+    2300018: pCylinder2 1
+    2300020: pCylinder3
+    2300022: pCylinder3 1
+    2300024: pCylinder4
+    2300026: pCylinder4 1
+    2300028: pCylinder5
+    2300030: pCylinder5 1
+    2300032: pCylinder6
+    2300034: pCylinder6 1
+    2300036: pCylinder7
+    2300038: pCylinder7 1
+    2300040: pCylinder8
+    2300042: pCylinder8 1
+    2300044: R_Joint_01
+    2300046: R_Joint_02
+    2300048: R_Joint_03
+    2300050: R_Joint_04
+    2300052: R_Mouth
+    2300054: Thorax
+    3300000: Head 1
+    3300002: L_Joint_01
+    3300004: L_Joint_02
+    3300006: L_Joint_03
+    3300008: L_Joint_04
+    3300010: L_Mouth
+    3300012: pCylinder1
+    3300014: pCylinder1 1
+    3300016: pCylinder2
+    3300018: pCylinder2 1
+    3300020: pCylinder3
+    3300022: pCylinder3 1
+    3300024: pCylinder4
+    3300026: pCylinder4 1
+    3300028: pCylinder5
+    3300030: pCylinder5 1
+    3300032: pCylinder6
+    3300034: pCylinder6 1
+    3300036: pCylinder7
+    3300038: pCylinder7 1
+    3300040: pCylinder8
+    3300042: pCylinder8 1
+    3300044: R_Joint_01
+    3300046: R_Joint_02
+    3300048: R_Joint_03
+    3300050: R_Joint_04
+    3300052: R_Mouth
+    3300054: Thorax
+    4300000: Thorax
+    4300002: R_Joint_04
+    4300004: R_Joint_03
+    4300006: R_Joint_02
+    4300008: R_Joint_01
+    4300010: L_Joint_04
+    4300012: L_Joint_03
+    4300014: L_Joint_02
+    4300016: L_Joint_01
+    4300018: Head
+    4300020: pCylinder1
+    4300022: pCylinder5
+    4300024: pCylinder1
+    4300026: pCylinder5
+    4300028: pCylinder2
+    4300030: pCylinder6
+    4300032: pCylinder2
+    4300034: pCylinder6
+    4300036: pCylinder3
+    4300038: pCylinder7
+    4300040: pCylinder3
+    4300042: pCylinder7
+    4300044: pCylinder4
+    4300046: pCylinder8
+    4300048: pCylinder4
+    4300050: pCylinder8
+    4300052: R_Mouth
+    4300054: L_Mouth
+    7400000: Spider Walk
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Spider Walk
+      takeName: Take 001
+      firstFrame: 2
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

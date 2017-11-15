@@ -14,12 +14,6 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: YSpeed
-    m_Type: 1
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
   - m_Name: Grounded
     m_Type: 4
     m_DefaultFloat: 0
@@ -537,7 +531,7 @@ AnimatorStateMachine:
     m_Position: {x: 564, y: 168, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102760756616008656}
-    m_Position: {x: 432, y: 96, z: 0}
+    m_Position: {x: 444, y: 96, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
