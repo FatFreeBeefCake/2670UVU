@@ -80,6 +80,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
     private void Crouch()
     {
+        transform.localPosition -= new Vector3(0, 0.3f, 0);
         transform.localScale = new Vector3(0.6f, 0.3f, 0.6f);
         Artobj.transform.localScale = new Vector3(20,40,20);
         AniCont.IsCrouched = true;
