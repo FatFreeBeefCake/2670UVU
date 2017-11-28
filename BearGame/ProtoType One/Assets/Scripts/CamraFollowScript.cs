@@ -5,14 +5,19 @@ using UnityEngine;
 public class CamraFollowScript : MonoBehaviour
 {
 
-    public GameObject player;
+    public Transform player;
 
-    public float OSX = 0;
-    public float OSY = 0;
-    public float OSZ = 0;
+    public Vector3 Camoffset;
 
-    void LateUpdate()
+    private void Update()
     {
-        this.transform.position = new Vector3(player.transform.position.x + OSX, player.transform.position.y + OSY, player.transform.position.z + OSZ);
+        FollowTarget();
     }
+
+    void FollowTarget()
+    {
+        this.transform.position = Vector3.Lerp(transform.position, player.position + Camoffset, .99f);
+        transform.LookAt(player);
+    }
+
 }
