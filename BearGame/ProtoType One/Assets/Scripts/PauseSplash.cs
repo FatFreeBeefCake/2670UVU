@@ -27,7 +27,7 @@ public class PauseSplash : MonoBehaviour
 
 
     public GameObject PauseScreen;
-    public GameObject Playscreen;
+    //public GameObject Gold;
     // Use this for initialization
     void Start()
     {
@@ -36,12 +36,15 @@ public class PauseSplash : MonoBehaviour
 
     private void Pause()
     {
+        //Gold.SetActive(true);
         PauseScreen.SetActive(true);
+
         Time.timeScale = 0;
     }
 
     public void Resume()
     {
+        //Gold.SetActive(false);  
         PauseScreen.SetActive(false);
         Time.timeScale = 1;
     }
