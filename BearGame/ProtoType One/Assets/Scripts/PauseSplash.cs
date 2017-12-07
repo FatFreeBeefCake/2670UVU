@@ -22,6 +22,8 @@ public class PauseSplash : MonoBehaviour
     public GameObject Box4;
     public GameObject Box5;
     public GameObject Box6;
+    public GameObject YouWin;
+    public PlayerMoveScript player;
 
 
 
@@ -31,6 +33,7 @@ public class PauseSplash : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        player = gameObject.GetComponent<PlayerMoveScript>();
         ActionScript.Pause = Pause;
     }
 
@@ -60,6 +63,7 @@ public class PauseSplash : MonoBehaviour
         ResetObjects();
         PauseScreen.SetActive(false);
         Time.timeScale = 1;
+        YouWin.SetActive(false);
         Enemy1.SetActive(true);
         Enemy2.SetActive(true);
         Enemy3.SetActive(true);
