@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMoveScript : MonoBehaviour {
@@ -14,7 +15,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
     public GameObject Artobj;
 
-    private Action OnLandAction;
+    private UnityAction OnLandAction;
     private Image healthbar;
 
     float speed;

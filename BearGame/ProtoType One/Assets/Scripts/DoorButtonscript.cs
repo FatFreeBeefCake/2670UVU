@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.Events;
 
 public class DoorButtonscript : MonoBehaviour {
 
-    public static Action OpenDoor;
+    public static UnityAction OpenDoor;
 
 	void OnTriggerEnter (Collider other)
     {

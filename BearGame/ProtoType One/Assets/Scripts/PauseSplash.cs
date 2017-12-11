@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.Events;
 
 public class PauseSplash : MonoBehaviour
 {
-    public static Action ResetObjects;
+    public static UnityAction ResetObjects;
     //Reset Game Objects
     public Transform Spawn;
     public GameObject Enemy1;

@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.Events;
 public class ActionScript : MonoBehaviour {
 
-    public static Action<float> MoveAction;
-    public static Action ClimbAction;
-    public static Action JumpAction;
-    public static Action Crouch;
-    public static Action Stand;
-    public static Action Run;
-    public static Action Walk;
-    public static Action<float> BearAction;
-    public static Action Pause;
+    public static UnityAction<float> MoveAction;
+    public static UnityAction ClimbAction;
+    public static UnityAction JumpAction;
+    public static UnityAction Crouch;
+    public static UnityAction Stand;
+    public static UnityAction Run;
+    public static UnityAction Walk;
+    public static UnityAction<float> BearAction;
+    public static UnityAction Pause;
 
 	// Update is called once per frame
 	void Update () {
